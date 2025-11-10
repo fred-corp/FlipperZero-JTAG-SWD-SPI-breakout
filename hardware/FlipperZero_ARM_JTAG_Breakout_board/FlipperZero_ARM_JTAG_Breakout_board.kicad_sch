@@ -3206,7 +3206,7 @@
 				(pin bidirectional line
 					(at -17.78 10.16 0)
 					(length 2.54)
-					(name "SPI1.MISO"
+					(name "SPI1.SDI"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3230,7 +3230,7 @@
 				(pin bidirectional line
 					(at -17.78 7.62 0)
 					(length 2.54)
-					(name "SPI1.MOSI"
+					(name "SPI1.SDO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5762,7 +5762,7 @@
 		)
 		(uuid "663260b0-5fb6-4063-bbee-a3ac378c8203")
 	)
-	(label "MOSI"
+	(label "SDO"
 		(at 57.15 48.26 0)
 		(effects
 			(font
@@ -5932,7 +5932,7 @@
 		)
 		(uuid "9ce0d899-995d-46b8-b8bb-4e41ab198abc")
 	)
-	(label "MOSI"
+	(label "SDO"
 		(at 193.04 133.35 180)
 		(effects
 			(font
@@ -5982,7 +5982,7 @@
 		)
 		(uuid "a46fc709-399e-499e-b90d-e03947afaecf")
 	)
-	(label "MISO"
+	(label "SDI"
 		(at 157.48 130.81 0)
 		(effects
 			(font
@@ -6052,7 +6052,7 @@
 		)
 		(uuid "c7516152-5b19-4f75-b852-a61883f93d5e")
 	)
-	(label "MISO"
+	(label "SDI"
 		(at 57.15 45.72 0)
 		(effects
 			(font
@@ -6521,7 +6521,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "162ed65d-c149-4430-bb47-c809648a29d7")
@@ -6543,7 +6543,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "OSHW:OSHW-Certification-Mark-Wide_4x25mm_SilkMask"
+		(property "Footprint" "OSHW:OSHW-Certification-Mark-Stacked_8x7mm_SilkMask"
 			(at 34.29 189.23 0)
 			(effects
 				(font
@@ -6678,7 +6678,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Module:Flipper_Zero_Straight"
+		(property "Footprint" "Module:Flipper_Zero_Angled"
 			(at 82.55 81.534 0)
 			(effects
 				(font
