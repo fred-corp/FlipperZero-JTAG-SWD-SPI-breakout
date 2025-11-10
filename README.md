@@ -2,6 +2,27 @@
 
 A simple breakout board to connect a FlipperZero to JTAG/SWD/SPI targets.
 
+OSHW ID : TBD
+
+## Table of Contents
+
+- [Features](#features)
+- [Usage](#usage)
+- [Building Instructions](#building-instructions)
+- [License & Acknowledgements](#license--acknowledgements)
+
+## Features
+
+> TODO : Add header feature list
+
+## Usage
+
+> TODO : Add usage instructions for some Flipper Zero apps (e.G. DAP Link, SPI mem manager, etc.)
+
+## Building Instructions
+
+> TODO : Add assembly instructions and wiring diagrams from KiCAD sources (awaiting OSHWA certification).
+
 ## License & Acknowledgements
 
 Made with ❤️, lots of ☕️, and lack of 🛌  
