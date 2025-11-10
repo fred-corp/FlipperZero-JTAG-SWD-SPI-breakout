@@ -6678,7 +6678,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Module:Flipper_Zero_Angled"
+		(property "Footprint" "Module:Flipper_Zero_Straight"
 			(at 82.55 81.534 0)
 			(effects
 				(font
