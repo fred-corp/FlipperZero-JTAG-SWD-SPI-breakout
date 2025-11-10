@@ -1,4 +1,6 @@
-# FlipperZero ARM JTAG breakout board
+# FlipperZero JTAG/SWD/SPI breakout
+
+A simple breakout board to connect a FlipperZero to JTAG/SWD/SPI targets.
 
 ## License & Acknowledgements
 
