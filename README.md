@@ -7,13 +7,33 @@ OSHW ID : TBD
 ## Table of Contents
 
 - [Features](#features)
+  - [Compatible Apps](#compatible-apps)
+  - [Pin selection](#pin-selection)
+- [Pinouts](#pinouts)
+  - [FlipperZero GPIO header](#flipperzero-gpio-header)
+  - [20 pin JTAG 2x10 0.1" header](#20-pin-jtag-2x10-01-header)
+  - [10 pin JTAG/SWD 2x5 0.1" and 0.05" header](#10-pin-jtagswd-2x5-01-and-005-header)
+  - [6 pin SWD 2x3 0.1" header](#6-pin-swd-2x3-01-header)
+  - [6 pin SPI 2x3 0.1" header](#6-pin-spi-2x3-01-header)
 - [Usage](#usage)
 - [Building Instructions](#building-instructions)
+- [Sources](#sources)
 - [License & Acknowledgements](#license--acknowledgements)
 
 ## Features
 
 Convert the FlipperZero's GPIO port into standard headers for JTAG, SWD, and SPI connections.
+
+### Compatible Apps
+
+The board should be compatible with any apps that use the FlipperZero's GPIO port for JTAG/SWD/SPI communication, though the following where the main targets during development for the pin selection and configuration :
+
+- [DAP Link](https://github.com/flipperdevices/flipperzero-good-faps/tree/dev/dap_link) (JTAG/SWD & UART)
+- [SWD Probe](https://github.com/xMasterX/all-the-plugins/tree/dev/base_pack/swd_probe) (SWD)
+- [SPI Mem Manager](https://github.com/flipperdevices/flipperzero-good-faps/tree/dev/spi_mem_manager) (SPI)
+- [SPI-Terminal](https://github.com/janwiesemann/flipper-spi-terminal) (SPI)
+- [UART Terminal](https://github.com/xMasterX/all-the-plugins/tree/dev/base_pack/uart_terminal) (UART)
+- [ESP Flasher](https://github.com/0xchocolate/flipperzero-esp-flasher) (UART)
 
 ### Pin selection
 
@@ -23,14 +43,43 @@ Depending on the app's requirements, some signals can be connected to different 
 - The TMS signal can be connected to GPIO 3 or GPIO 12
 - The UART TX pin can be connected to GPIO 13 or GPIO 15
 - The UART RX pin can be connected to GPIO 14 or GPIO 16
+- The SPI CS pin can be connected to GPIO 4
 
 Other pins can be configured with jumper shunts :
 
 - The VTref signal can be connected to 3.3V, 5V, or left floating
 - The PWRSel signal can be connected to 5V or GND depending on the target's pinout
 - The nTRST signal on the 10 pin headers can be connected to nTRST or left floating (NC)
+- The SPI CS signal on the 6 pin SPI header can be connected to GPIO 4 or GPIO 6
 
 > Note : Not all signals are used bu the FlipperZero apps, but the board can also be used to convert from a 20-pin ARM JTAG connector to 10 or 6 pin headers.
+
+## Pinouts
+
+### FlipperZero GPIO header
+
+| Pin | Signals               |
+|-----|-----------------------|
+| 1   | 5V                    |
+| 2   | SPI-SDO, *JTAG-TCK*   |
+| 3   | SPI-SDI, *JTAG-TMS*   |
+| 4   | *SPI-CS*, JTAG-nRESET |
+| 5   | SPI-SCK, JTAG-TDO     |
+| 6   | *SPI-CS*, JTAG-TDI    |
+| 7   | NC                    |
+| 8   | GND                   |
+| 9   | 3.3V                  |
+| 10  | *JTAG-TCK*            |
+| 11  | GND                   |
+| 12  | *JTAG-TMS*            |
+| 13  | *UART_TX*             |
+| 14  | *UART-RX*             |
+| 15  | *UART-TX*             |
+| 16  | *UART-RX*             |
+| 17  | NC                    |
+| 18  | GND                   |
+
+> Note : *Italic* pins are configurable with the solder jumpers
 
 ### 20 pin JTAG 2x10 0.1" header
 
@@ -74,6 +123,16 @@ Other pins can be configured with jumper shunts :
 | *CS*   | 5   | 6   | GND     |
 
 The CS pin can be connected to GPIO 4 or GPIO 6 of the FlipperZero, depending on the app's requirements.
+
+### 5 pin UART 1x5 0.1" header
+
+| Signal | Pin |
+|--------|-----|
+| 5V     | 1   |
+| 3.3V   | 2   |
+| TX     | 3   |
+| RX     | 4   |
+| GND    | 5   |
 
 ## Usage
 
