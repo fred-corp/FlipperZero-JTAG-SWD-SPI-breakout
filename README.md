@@ -29,12 +29,12 @@ Convert the Flipper Zero's GPIO port into standard headers for JTAG, SWD, SPI, a
 
 The board should be compatible with any apps that use the Flipper Zero's GPIO port for JTAG/SWD/SPI communication, though the following where the main targets during development for the pin selection and configuration :
 
-- [DAP Link](https://github.com/flipperdevices/flipperzero-good-faps/tree/dev/dap_link) (JTAG/SWD & UART)
-- [SWD Probe](https://github.com/xMasterX/all-the-plugins/tree/dev/base_pack/swd_probe) (SWD)
-- [SPI Mem Manager](https://github.com/flipperdevices/flipperzero-good-faps/tree/dev/spi_mem_manager) (SPI)
-- [SPI-Terminal](https://github.com/janwiesemann/flipper-spi-terminal) (SPI)
-- [UART Terminal](https://github.com/xMasterX/all-the-plugins/tree/dev/base_pack/uart_terminal) (UART)
-- [ESP Flasher](https://github.com/0xchocolate/flipperzero-esp-flasher) (UART)
+- [DAP Link](https://lab.flipper.net/apps/dap_link) (JTAG/SWD & UART)
+- [SWD Probe](https://lab.flipper.net/apps/swd_probe) (SWD)
+- [SPI Mem Manager](https://lab.flipper.net/apps/spi_mem_manager) (SPI)
+- [SPI-Terminal](https://lab.flipper.net/apps/flipper_spi_terminal) (SPI)
+- [UART Terminal](https://lab.flipper.net/apps/uart_terminal) (UART)
+- [ESP Flasher](https://lab.flipper.net/apps/esp_flasher) (UART)
 
 ### Pin selection
 
