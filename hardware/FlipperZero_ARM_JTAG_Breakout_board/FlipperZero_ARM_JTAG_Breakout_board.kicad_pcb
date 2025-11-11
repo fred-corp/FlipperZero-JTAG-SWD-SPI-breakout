@@ -11803,7 +11803,7 @@
 			(justify right)
 		)
 	)
-	(gr_text "TX"
+	(gr_text "RX"
 		(at 119.888 93.472 0)
 		(layer "F.SilkS")
 		(uuid "69fb3c85-3440-4dbf-aa84-d08f86d5ec06")
@@ -11923,7 +11923,7 @@
 			(justify top)
 		)
 	)
-	(gr_text "RX"
+	(gr_text "TX"
 		(at 121.92 93.472 0)
 		(layer "F.SilkS" knockout)
 		(uuid "c923a687-751f-4eca-b74c-390b916a3409")
