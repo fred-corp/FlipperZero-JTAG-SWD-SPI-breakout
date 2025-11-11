@@ -13,7 +13,67 @@ OSHW ID : TBD
 
 ## Features
 
-> TODO : Add header feature list
+Convert the FlipperZero's GPIO port into standard headers for JTAG, SWD, and SPI connections.
+
+### Pin selection
+
+Depending on the app's requirements, some signals can be connected to different GPIO pins of the FlipperZero using solder jumpers (see assembly instructions/schematics) :
+
+- The TCK signal can be connected to GPIO 2 or GPIO 10
+- The TMS signal can be connected to GPIO 3 or GPIO 12
+- The UART TX pin can be connected to GPIO 13 or GPIO 15
+- The UART RX pin can be connected to GPIO 14 or GPIO 16
+
+Other pins can be configured with jumper shunts :
+
+- The VTref signal can be connected to 3.3V, 5V, or left floating
+- The PWRSel signal can be connected to 5V or GND depending on the target's pinout
+- The nTRST signal on the 10 pin headers can be connected to nTRST or left floating (NC)
+
+> Note : Not all signals are used bu the FlipperZero apps, but the board can also be used to convert from a 20-pin ARM JTAG connector to 10 or 6 pin headers.
+
+### 20 pin JTAG 2x10 0.1" header
+
+| Signal    | Pin | Pin | Signal |
+|-----------|-----|-----|--------|
+| VTref     | 1   | 2   | NC     |
+| nTRST     | 3   | 4   | GND    |
+| TDI       | 5   | 6   | GND    |
+| TMS       | 7   | 8   | GND    |
+| TCK       | 9   | 10  | GND    |
+| RTCK      | 11  | 12  | GND    |
+| TDO       | 13  | 14  | GND    |
+| nRESET    | 15  | 16  | GND    |
+| NC        | 17  | 18  | GND    |
+| 5V-Supply | 19  | 20  | GND    |
+
+### 10 pin JTAG/SWD 2x5 0.1" and 0.05" header
+
+| Signal     | Pin | Pin | Signal |
+|------------|-----|-----|--------|
+| VTref      | 1   | 2   | TMS    |
+| GND        | 3   | 4   | TCK    |
+| *PWRSel*   | 5   | 6   | TDO    |
+| RTCK       | 7   | 8   | TDI    |
+| *nTRST/NC* | 9   | 10  | nRESET |
+
+### 6 pin SWD 2x3 0.1" header
+
+| Signal | Pin | Pin | Signal |
+|--------|-----|-----|--------|
+| VTref  | 1   | 2   | TMS    |
+| nRESET | 3   | 4   | TCK    |
+| GND    | 5   | 6   | TDO    |
+
+### 6 pin SPI 2x3 0.1" header
+
+| Signal | Pin | Pin | Signal  |
+|--------|-----|-----|---------|
+| SDI    | 1   | 2   | VTref   |
+| SCK    | 3   | 4   | SDO     |
+| *CS*   | 5   | 6   | GND     |
+
+The CS pin can be connected to GPIO 4 or GPIO 6 of the FlipperZero, depending on the app's requirements.
 
 ## Usage
 
