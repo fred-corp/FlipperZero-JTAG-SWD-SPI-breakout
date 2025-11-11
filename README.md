@@ -1,6 +1,7 @@
 # Flipper Zero JTAG/SWD/SPI breakout
 
-![Flipper Zero JTAG/SWD/SPI breakout board](docs/PCB_Render.png)
+![Flipper Zero JTAG/SWD/SPI breakout board](docs/PCB_Front_Render.png)
+![Flipper Zero JTAG/SWD/SPI breakout board back](docs/PCB_Back_Render.png)
 
 A simple breakout board to connect a Flipper Zero to JTAG/SWD/SPI targets.
 
