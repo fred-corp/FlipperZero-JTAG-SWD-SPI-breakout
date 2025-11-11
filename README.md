@@ -1,6 +1,6 @@
-# FlipperZero JTAG/SWD/SPI breakout
+# Flipper Zero JTAG/SWD/SPI breakout
 
-A simple breakout board to connect a FlipperZero to JTAG/SWD/SPI targets.
+A simple breakout board to connect a Flipper Zero to JTAG/SWD/SPI targets.
 
 OSHW ID : TBD
 
@@ -10,11 +10,12 @@ OSHW ID : TBD
   - [Compatible Apps](#compatible-apps)
   - [Pin selection](#pin-selection)
 - [Pinouts](#pinouts)
-  - [FlipperZero GPIO header](#flipperzero-gpio-header)
+  - [Flipper Zero GPIO header](#flipper-zero-gpio-header)
   - [20 pin JTAG 2x10 0.1" header](#20-pin-jtag-2x10-01-header)
   - [10 pin JTAG/SWD 2x5 0.1" and 0.05" header](#10-pin-jtagswd-2x5-01-and-005-header)
   - [6 pin SWD 2x3 0.1" header](#6-pin-swd-2x3-01-header)
   - [6 pin SPI 2x3 0.1" header](#6-pin-spi-2x3-01-header)
+  - [5 pin UART 1x5 0.1" header](#5-pin-uart-1x5-01-header)
 - [Usage](#usage)
 - [Building Instructions](#building-instructions)
 - [Sources](#sources)
@@ -22,11 +23,11 @@ OSHW ID : TBD
 
 ## Features
 
-Convert the FlipperZero's GPIO port into standard headers for JTAG, SWD, and SPI connections.
+Convert the Flipper Zero's GPIO port into standard headers for JTAG, SWD, SPI, and UART connections.
 
 ### Compatible Apps
 
-The board should be compatible with any apps that use the FlipperZero's GPIO port for JTAG/SWD/SPI communication, though the following where the main targets during development for the pin selection and configuration :
+The board should be compatible with any apps that use the Flipper Zero's GPIO port for JTAG/SWD/SPI communication, though the following where the main targets during development for the pin selection and configuration :
 
 - [DAP Link](https://github.com/flipperdevices/flipperzero-good-faps/tree/dev/dap_link) (JTAG/SWD & UART)
 - [SWD Probe](https://github.com/xMasterX/all-the-plugins/tree/dev/base_pack/swd_probe) (SWD)
@@ -37,7 +38,7 @@ The board should be compatible with any apps that use the FlipperZero's GPIO por
 
 ### Pin selection
 
-Depending on the app's requirements, some signals can be connected to different GPIO pins of the FlipperZero using solder jumpers (see assembly instructions/schematics) :
+Depending on the app's requirements, some signals can be connected to different GPIO pins of the Flipper Zero using solder jumpers (see assembly instructions/schematics) :
 
 - The TCK signal can be connected to GPIO 2 or GPIO 10
 - The TMS signal can be connected to GPIO 3 or GPIO 12
@@ -52,11 +53,11 @@ Other pins can be configured with jumper shunts :
 - The nTRST signal on the 10 pin headers can be connected to nTRST or left floating (NC)
 - The SPI CS signal on the 6 pin SPI header can be connected to GPIO 4 or GPIO 6
 
-> Note : Not all signals are used bu the FlipperZero apps, but the board can also be used to convert from a 20-pin ARM JTAG connector to 10 or 6 pin headers.
+> Note : Not all signals are used bu the Flipper Zero apps, but the board can also be used to convert from a 20-pin ARM JTAG connector to 10 or 6 pin headers.
 
 ## Pinouts
 
-### FlipperZero GPIO header
+### Flipper Zero GPIO header
 
 | Pin | Signals               |
 |-----|-----------------------|
@@ -122,17 +123,17 @@ Other pins can be configured with jumper shunts :
 | SCK    | 3   | 4   | SDO     |
 | *CS*   | 5   | 6   | GND     |
 
-The CS pin can be connected to GPIO 4 or GPIO 6 of the FlipperZero, depending on the app's requirements.
+The CS pin can be connected to GPIO 4 or GPIO 6 of the Flipper Zero, depending on the app's requirements.
 
 ### 5 pin UART 1x5 0.1" header
 
-| Signal | Pin |
-|--------|-----|
-| 5V     | 1   |
-| 3.3V   | 2   |
-| TX     | 3   |
-| RX     | 4   |
-| GND    | 5   |
+| Pin | Signal |
+|-----|--------|
+| 1   | 5V     |
+| 2   | 3.3V   |
+| 3   | TX     |
+| 4   | RX     |
+| 5   | GND    |
 
 ## Usage
 
@@ -144,7 +145,7 @@ The CS pin can be connected to GPIO 4 or GPIO 6 of the FlipperZero, depending on
 
 ## Sources
 
-- [FLipperZero Documentation](https://docs.flipperzero.one/)
+- [Flipper Zero Documentation](https://docs.flipperzero.one/)
 - [Segger JTAG pinouts](https://www.segger.com/products/debug-probes/j-link/technology/interface-description/)
 - [ARM JTAG/SWD pinouts](https://developer.arm.com/documentation/dui0499/d/ARM-DSTREAM-Target-Interface-Connections/)
 - [AVR ISP pinouts](https://www.microchip.com/en-us/development-tool/atavrisp2)
