@@ -83,6 +83,13 @@ The CS pin can be connected to GPIO 4 or GPIO 6 of the FlipperZero, depending on
 
 > TODO : Add assembly instructions and wiring diagrams from KiCAD sources (awaiting OSHWA certification).
 
+## Sources
+
+- [FLipperZero Documentation](https://docs.flipperzero.one/)
+- [Segger JTAG pinouts](https://www.segger.com/products/debug-probes/j-link/technology/interface-description/)
+- [ARM JTAG/SWD pinouts](https://developer.arm.com/documentation/dui0499/d/ARM-DSTREAM-Target-Interface-Connections/)
+- [AVR ISP pinouts](https://www.microchip.com/en-us/development-tool/atavrisp2)
+
 ## License & Acknowledgements
 
 Made with ❤️, lots of ☕️, and lack of 🛌  
