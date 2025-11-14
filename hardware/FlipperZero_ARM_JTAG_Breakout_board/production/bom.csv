@@ -1,0 +1,17 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+A1a,Flipper_Zero_Straight_8pin,1,Flipper_Zero,C42431813
+A1b,Flipper_Zero_Straight_10pin,1,Flipper_Zero,C42431810
+J1,IDC-Header_2x10_P2.54mm_Vertical,1,ARM-JTAG,C429961
+J10,PinHeader_1x03_P2.54mm_Vertical,1,nTRST_EN,C42431836
+J2,IDC-Header_2x05_P2.54mm_Vertical,1,TC2050-IDC,C429962
+J3,IDC-TH_10P-P1.27-V-M-R2-C5-S1.27,1,1.27mm,C50878437
+J4,IDC-Header_2x03_P2.54mm_Vertical,1,TC2030-IDC,C4749192
+J5,IDC-Header_2x03_P2.54mm_Vertical,1,SPI/ISP,C4749192
+J6,PinHeader_1x05_P2.54mm_Vertical,1,UART,C42431835
+J7,PinHeader_1x04_P2.54mm_Vertical,1,VTrefSel,C42431808
+J8,PinHeader_1x04_P2.54mm_Vertical,1,PWRSel,C42431808
+J9,PinHeader_1x03_P2.54mm_Vertical,1,RSTSel,C42431836
+LED1,LED1206-R-RD_ORANGE,1,XL-3216UOC,C965823
+R1,0603,1,150,C2907103
+SW1,SW-SMD_4P-L5.2-W5.2-P3.70-LS6.4,1,TS1187A16015,C22375382
+,,4,2.54mm_shunt,C100114
