@@ -1,11 +1,11 @@
 # Flipper Zero JTAG/SWD/SPI breakout
 
-![Flipper Zero JTAG/SWD/SPI breakout board](docs/PCB_Front_Render.png)
+![Flipper Zero JTAG/SWD/SPI breakout board front](docs/PCB_Front_Render.png)
 ![Flipper Zero JTAG/SWD/SPI breakout board back](docs/PCB_Back_Render.png)
 
 A simple breakout board to connect a Flipper Zero to JTAG/SWD/SPI targets.
 
-OSHW ID : TBD
+OSHW ID : [BE000022](https://certification.oshwa.org/be000022.html)
 
 ## Table of Contents
 
@@ -39,6 +39,10 @@ The board should be compatible with any apps that use the Flipper Zero's GPIO po
 - [UART Terminal](https://lab.flipper.net/apps/uart_terminal) (UART)
 - [ESP Flasher](https://lab.flipper.net/apps/esp_flasher) (UART)
 
+> **Note** :  
+Not all JTAG signals are used by the Flipper Zero apps, but the board can also be used to convert from a 20-pin ARM JTAG connector from another programmer to 10 or 6 pin headers.  
+It can also be used as a SWD interface with the Flipper Zero as a target, by bridging the TCK and TMS signals to GPIO 10 and GPIO 12 via their corresponding solder jumpers. This enables programming/debugging the Flipper Zero itself with an external programmer.
+
 ### Pin selection
 
 Depending on the app's requirements, some signals can be connected to different GPIO pins of the Flipper Zero using solder jumpers (see assembly instructions/schematics) :
@@ -56,9 +60,9 @@ Other pins can be configured with jumper shunts :
 - The nTRST signal on the 10 pin headers can be connected to nTRST or left floating (NC)
 - The SPI CS signal on the 6 pin SPI header can be connected to GPIO 4 or GPIO 6
 
-> Note : Not all signals are used bu the Flipper Zero apps, but the board can also be used to convert from a 20-pin ARM JTAG connector to 10 or 6 pin headers.
-
 ## Pinouts
+
+> Note : *Italic* pins are configurable with the solder jumpers
 
 ### Flipper Zero GPIO header
 
@@ -72,6 +76,7 @@ Other pins can be configured with jumper shunts :
 | 6   | *SPI-CS*, JTAG-TDI    |
 | 7   | NC                    |
 | 8   | GND                   |
+|     |                       |
 | 9   | 3.3V                  |
 | 10  | *JTAG-TCK*            |
 | 11  | GND                   |
@@ -82,8 +87,6 @@ Other pins can be configured with jumper shunts :
 | 16  | *UART-RX*             |
 | 17  | NC                    |
 | 18  | GND                   |
-
-> Note : *Italic* pins are configurable with the solder jumpers
 
 ### 20 pin JTAG 2x10 0.1" header
 

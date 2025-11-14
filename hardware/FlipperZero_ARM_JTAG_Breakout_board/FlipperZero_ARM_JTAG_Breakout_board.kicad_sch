@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "09bef04b-5b1b-4f9f-9366-e395bccbfbf5")
 	(paper "A4")
+	(title_block
+		(title "FlipperZero JTAG/SWD/SPI breakout")
+		(date "2025-11-14")
+		(rev "1")
+		(company "Fred Corp.")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x03_Pin"
 			(pin_names
@@ -3553,7 +3559,7 @@
 			(exclude_from_sim no)
 			(in_bom no)
 			(on_board no)
-			(property "Reference" "LOGO"
+			(property "Reference" "LOGO1"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3562,7 +3568,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" ""
+			(property "Value" "BE000022"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3571,7 +3577,7 @@
 					(hide yes)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "OSHW:OSHW-Certification-Mark-Stacked_8x7mm_SilkMask"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3822,7 +3828,7 @@
 						(type outline)
 					)
 				)
-				(text "XX000000"
+				(text "BE000022"
 					(at 0 -2.286 0)
 					(effects
 						(font
@@ -6517,7 +6523,7 @@
 	)
 	(symbol
 		(lib_id "OSHW:OSHW_Certification_Mark_Stacked_Small")
-		(at 34.29 189.23 0)
+		(at 280.67 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -6526,7 +6532,7 @@
 		(fields_autoplaced yes)
 		(uuid "162ed65d-c149-4430-bb47-c809648a29d7")
 		(property "Reference" "LOGO1"
-			(at 34.29 189.23 0)
+			(at 280.67 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6534,8 +6540,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "~"
-			(at 34.29 189.23 0)
+		(property "Value" "BE000022"
+			(at 280.67 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6544,7 +6550,7 @@
 			)
 		)
 		(property "Footprint" "OSHW:OSHW-Certification-Mark-Stacked_8x7mm_SilkMask"
-			(at 34.29 189.23 0)
+			(at 280.67 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6553,7 +6559,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 34.29 189.23 0)
+			(at 280.67 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6562,7 +6568,7 @@
 			)
 		)
 		(property "Description" "OSHW Certification Mark, Stacked"
-			(at 34.29 189.23 0)
+			(at 280.67 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
